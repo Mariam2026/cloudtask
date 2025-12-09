@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/CalculatorProject.git'
+                git 'https://github.com/Mariam2026/cloudtask.git'
             }
         }
 
