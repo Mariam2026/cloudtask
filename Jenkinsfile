@@ -10,19 +10,22 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                // Full path to Maven
+                bat 'C:\\Users\\maria\\Downloads\\apache-maven-3.9.11-bin\\apache-maven-3.9.11\\bin\\mvn clean compile'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'mvn test'
+                // Full path to Maven
+                bat 'C:\\Users\\maria\\Downloads\\apache-maven-3.9.11-bin\\apache-maven-3.9.11\\bin\\mvn test'
             }
         }
     }
 
     post {
         always {
+            // Publish JUnit test results
             junit '**/target/surefire-reports/*.xml'
         }
     }
